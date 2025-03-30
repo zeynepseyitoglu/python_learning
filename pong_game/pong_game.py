@@ -50,8 +50,11 @@ while game_is_on:
     if ball.xcor() > 380:
         ball.reset_position()
         score.l_point()
+        ball.move_speed = 0.1
 
     if ball.xcor() < -380:
         ball.reset_position()
+        score.r_point()
+        ball.move_speed = 0.1
 
 sc.exitonclick()
